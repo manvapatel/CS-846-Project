@@ -1,0 +1,55 @@
+
+Call:
+glm(formula = merged_or_not ~ (contrib_gender_female * contrib_country_central_and_southern_asia) + 
+    (contrib_gender_female * contrib_country_eastern_and_south_eastern_asia) + 
+    (contrib_gender_female * contrib_country_latin_america_and_the_caribbean) + 
+    (contrib_gender_female * contrib_country_northern_africa_and_western_asia) + 
+    (contrib_gender_female * contrib_country_oceania) + (contrib_gender_female * 
+    contrib_country_sub_saharan_africa) + num_commits + num_commit_comments + 
+    num_issue_comments + requester_succ_rate + pr_succ_rate + 
+    perc_contrib_neg_emo + perc_contrib_pos_emo + perc_contrib_neu_emo + 
+    social_strength + same_country + friday_effect, family = binomial, 
+    data = dataset)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-2.5911   0.4300   0.5251   0.6125   5.0851  
+
+Coefficients:
+                                                                         Estimate Std. Error z value Pr(>|z|)    
+(Intercept)                                                            -1.8848484  0.0581016 -32.441  < 2e-16 ***
+contrib_gender_female                                                   0.0601549  0.0114402   5.258 1.45e-07 ***
+contrib_country_central_and_southern_asia                              -0.3616262  0.0312868 -11.558  < 2e-16 ***
+contrib_country_eastern_and_south_eastern_asia                         -0.1795834  0.0127608 -14.073  < 2e-16 ***
+contrib_country_latin_america_and_the_caribbean                        -0.1111829  0.0176660  -6.294 3.10e-10 ***
+contrib_country_northern_africa_and_western_asia                       -0.0934267  0.0284838  -3.280 0.001038 ** 
+contrib_country_oceania                                                 0.0259081  0.0205432   1.261 0.207254    
+contrib_country_sub_saharan_africa                                     -0.0699058  0.0430395  -1.624 0.104328    
+num_commits                                                            -0.0021443  0.0001685 -12.728  < 2e-16 ***
+num_commit_comments                                                    -0.0284388  0.0032914  -8.640  < 2e-16 ***
+num_issue_comments                                                     -0.0239638  0.0005334 -44.929  < 2e-16 ***
+requester_succ_rate                                                     0.8240333  0.0083429  98.771  < 2e-16 ***
+pr_succ_rate                                                            3.1796156  0.0609058  52.205  < 2e-16 ***
+perc_contrib_neg_emo                                                   -0.8348679  0.0175751 -47.503  < 2e-16 ***
+perc_contrib_pos_emo                                                   -0.2063781  0.0141374 -14.598  < 2e-16 ***
+perc_contrib_neu_emo                                                   -0.4275950  0.0070535 -60.622  < 2e-16 ***
+social_strength                                                         1.1445306  0.0138894  82.403  < 2e-16 ***
+same_country                                                           -0.3958008  0.0077648 -50.973  < 2e-16 ***
+friday_effect                                                           0.0003242  0.0075614   0.043 0.965798    
+contrib_gender_female:contrib_country_central_and_southern_asia         0.4255917  0.0774183   5.497 3.86e-08 ***
+contrib_gender_female:contrib_country_eastern_and_south_eastern_asia   -0.3328288  0.0309205 -10.764  < 2e-16 ***
+contrib_gender_female:contrib_country_latin_america_and_the_caribbean   0.3273180  0.0868420   3.769 0.000164 ***
+contrib_gender_female:contrib_country_northern_africa_and_western_asia -0.1341411  0.1034962  -1.296 0.194942    
+contrib_gender_female:contrib_country_oceania                          -0.4284703  0.0753299  -5.688 1.29e-08 ***
+contrib_gender_female:contrib_country_sub_saharan_africa               -0.5116413  0.1896936  -2.697 0.006993 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 861479  on 946279  degrees of freedom
+Residual deviance: 816196  on 946255  degrees of freedom
+AIC: 816246
+
+Number of Fisher Scoring iterations: 4
+

@@ -1,0 +1,45 @@
+
+Call:
+lm(formula = perc_pos_emotion ~ (contrib_gender_female * contrib_country_eastern_and_south_eastern_asia) + 
+    (contrib_gender_female * contrib_country_latin_america_and_the_caribbean) + 
+    (contrib_gender_female * contrib_country_northern_africa_and_western_asia) + 
+    (contrib_gender_female * contrib_country_oceania) + (contrib_gender_female * 
+    contrib_country_sub_saharan_africa) + merged_or_not + num_commit_comments + 
+    num_issue_comments + requester_succ_rate + pr_succ_rate + 
+    perc_neu_emotion + perc_neg_emotion + social_strength + same_country, 
+    data = dataset)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-5.2585 -0.0813 -0.0733 -0.0234  0.9668 
+
+Coefficients:
+                                                                         Estimate Std. Error  t value Pr(>|t|)    
+(Intercept)                                                             2.456e-01  5.700e-03   43.080  < 2e-16 ***
+contrib_gender_female                                                   5.335e-03  9.588e-04    5.564 2.63e-08 ***
+contrib_country_eastern_and_south_eastern_asia                         -1.032e-02  1.197e-03   -8.625  < 2e-16 ***
+contrib_country_latin_america_and_the_caribbean                        -3.721e-03  1.595e-03   -2.333  0.01965 *  
+contrib_country_northern_africa_and_western_asia                       -2.870e-02  2.441e-03  -11.758  < 2e-16 ***
+contrib_country_oceania                                                -1.208e-03  1.781e-03   -0.678  0.49750    
+contrib_country_sub_saharan_africa                                     -3.708e-03  3.760e-03   -0.986  0.32411    
+merged_or_not                                                           1.337e-03  6.773e-04    1.973  0.04846 *  
+num_commit_comments                                                     5.066e-03  3.990e-04   12.698  < 2e-16 ***
+num_issue_comments                                                      1.131e-02  7.688e-05  147.162  < 2e-16 ***
+requester_succ_rate                                                    -9.601e-02  8.659e-04 -110.877  < 2e-16 ***
+pr_succ_rate                                                           -1.275e-02  5.968e-03   -2.137  0.03260 *  
+perc_neu_emotion                                                       -6.321e-02  6.159e-04 -102.619  < 2e-16 ***
+perc_neg_emotion                                                       -4.827e-02  2.066e-03  -23.360  < 2e-16 ***
+social_strength                                                         7.219e-03  1.082e-03    6.669 2.57e-11 ***
+same_country                                                           -6.697e-02  6.823e-04  -98.161  < 2e-16 ***
+contrib_gender_female:contrib_country_eastern_and_south_eastern_asia   -9.376e-03  3.123e-03   -3.002  0.00268 ** 
+contrib_gender_female:contrib_country_latin_america_and_the_caribbean  -4.198e-02  6.496e-03   -6.463 1.03e-10 ***
+contrib_gender_female:contrib_country_northern_africa_and_western_asia  9.388e-03  9.110e-03    1.031  0.30275    
+contrib_gender_female:contrib_country_oceania                          -2.473e-02  7.597e-03   -3.256  0.00113 ** 
+contrib_gender_female:contrib_country_sub_saharan_africa               -1.910e-02  2.030e-02   -0.941  0.34671    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.2281 on 863082 degrees of freedom
+Multiple R-squared:  0.06694,	Adjusted R-squared:  0.06692 
+F-statistic:  3096 on 20 and 863082 DF,  p-value: < 2.2e-16
+
